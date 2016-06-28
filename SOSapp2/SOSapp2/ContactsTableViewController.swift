@@ -57,8 +57,9 @@ class ContactsTableViewController: UITableViewController
     }
     
     override func viewWillDisappear(animated: Bool) {
-        
+        if contacts.count > 1 {
              self.navigationController?.setToolbarHidden(true, animated: true)
+             }
     }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
